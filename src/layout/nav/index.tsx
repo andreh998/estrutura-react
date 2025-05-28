@@ -1,7 +1,7 @@
-import { Collapse, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
-import { navStyle } from "./nav-style"
+import { Collapse, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material"
+import { navListCollapsedStyle, navStyle } from "./nav-style"
 import { Link } from "react-router-dom"
-import { ExpandLess, ExpandMore, StarBorder } from "@mui/icons-material"
+import { ExpandLess, ExpandMore } from "@mui/icons-material"
 import { useState } from "react"
 
 interface NavProp {
@@ -54,12 +54,12 @@ export default function Nav({ openNav }: NavProp) {
 
         <ListItem  onClick={handleClick}>
           <ListItemButton>
-            <ListItemText>Inbox</ListItemText>
+            <ListItemText>More</ListItemText>
              {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
         </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
+          <List sx={navListCollapsedStyle} component="div" disablePadding>
             <ListItem>
               <ListItemButton
                 component={Link}

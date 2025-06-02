@@ -9,6 +9,11 @@ const commonColors = {
     main: '#00ACC1',
     contrastText: '#FFFFFF',
   },
+  warning: {
+    main: '#F44336',     // Vermelho médio, forte mas equilibrado
+    light: '#FFCDD2',    // Vermelho clarinho
+    contrastText: '#FFFFFF',
+  },
 };
 
 export const lightTheme = createTheme({
@@ -21,6 +26,9 @@ export const lightTheme = createTheme({
     secondary: {
       ...commonColors.secondary,
       light: '#B2EBF2',
+    },
+    warning: {
+      ...commonColors.warning,
     },
     background: {
       default: '#F4F6F8',
@@ -44,6 +52,9 @@ export const darkTheme = createTheme({
     secondary: {
       ...commonColors.secondary,
       light: '#80DEEA',
+    },
+    warning: {
+      ...commonColors.warning,
     },
     background: {
       default: '#121212',

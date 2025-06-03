@@ -65,10 +65,17 @@ export default function Page1() {
     },
   ];
 
+  const handleEdit = (row: object) => {
+    console.log('Edit row:', row);
+  }
+
+  const handleDelete = (row: object) => {
+    console.log('Delete row:', row);
+  };
 
   return (
     <MainBox>
-      <Table columns={columns} rows={companies} />
+      <Table columns={columns} rows={companies} edit={handleEdit} del={handleDelete} />
     </MainBox>
   );
 }
